@@ -1,0 +1,174 @@
+.contenedorPrincipal {
+    max-width: 75%;
+    display: grid;
+    grid-template-rows: auto;
+    position: relative;
+    margin: auto;
+    outline: auto;
+}
+
+header {
+    display: grid;
+    grid-template-rows: auto;
+    text-align: center;
+}
+
+.cajaBotones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.botonHeader {
+    background-color: black;
+}
+
+.botonHeader:hover {
+    opacity: 50%;
+}
+
+h2 {
+    color: white;
+}
+
+
+
+.mainDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.nombrepj {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.clasepj {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    margin: auto;
+    margin-top: 5%;
+
+    text-align: center;
+}
+
+.razapj {
+    display:grid;
+    grid-template-rows: auto;
+    margin: auto;
+    margin-top: 5%;
+
+    text-align: center;
+}
+
+.statsDiv {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: auto;
+    text-align: center;
+}
+
+.stat {
+    display: grid;
+    grid-template-rows: auto;
+    margin: auto;
+    width: 6em;
+    
+}
+
+.mitadMain {
+    display: grid;
+    grid-template-rows: auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.stats {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: auto;
+    margin-top: -5%;
+    text-align: center;
+    
+    
+}
+
+.statsRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    text-align: center;
+}
+
+.titleStats {
+    margin: auto;
+}
+
+
+
+.divBoton {
+    margin: auto;
+    margin-top: 5%;
+
+}
+
+.hojaMain {
+    margin:auto;
+    margin-top: 5%;
+    max-width: 100%;
+}
+
+.datoHoja {
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+a:link {
+text-decoration: none;
+}
+
+.botonesAtaque {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.button1 {
+    
+    border: none ;
+    color: white;
+    background-color: rgb(255, 0, 68);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+}
+
+.button1:hover {
+    box-shadow: inset 400px 0 0 0 #f9e506;
+    cursor: pointer;
+    color: #000;
+}
+
+.button2 {
+    
+    border: none ;
+    color: white;
+    background-color: rgb(255, 0, 68);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+}
+
+.button2:hover {
+    box-shadow: inset 400px 0 0 0 #f9e506;
+    cursor: pointer;
+    color: #000;
+    }
+
