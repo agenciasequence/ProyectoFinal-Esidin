@@ -1,9 +1,5 @@
-fetch("./personajes.json")
-    .then(respuesta => respuesta.json())
-    .then(personajes => miPrograma(personajes))
-    .catch(error => console.log(error))
 
-function miPrograma(personajes) {
+
     
 
 //GENERADOR DE PERSONAJES DE DUNGEONS AND DRAGONS
@@ -84,38 +80,17 @@ function crearHoja (nombre, raza, clase, ataqEspada, ataqArco, dañEspada, dañA
 }
 
 
-// FUNCIÓN PARA LA SIMULACIÓN DE ATAQUES
-
-/* function ataques (mod){
-    let salida= ""
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max) +1
-
-    }                     
-    for (let i = 1; i < 11; i++) {
-        salida = salida + "ataque " + i + ": " + (Math.floor(mod) + getRandomInt(8)) + "\n"
-    }
-    alert(salida)
-} */
-
-
-
-    
-    
-
-
-
 //PERSONAJES PRE CARGADOS
 
-/* const Jan = new personaje("Jan", "Humano", "Bárbaro",16,14,16,10,10,12,3,1)
+const Jan = new personaje("Jan", "Humano", "Bárbaro",16,14,16,10,10,12,3,1)
 const Korra = new personaje("Korra", "Semiorco", "Mago",8,14,16,16,10,10,-1,2)
 const Adelfos = new personaje("Adelfos", "Elfo", "Explorador",8,16,14,12,14,10,-1,3)
-const Esben = new personaje("Esben", "Enano", "Guerrero",8,16,14,16,12,12,-1,3) */
+const Esben = new personaje("Esben", "Enano", "Guerrero",8,16,14,16,12,12,-1,3)
 
 //ARRAY DE NOMBRES Y ARRAY DE OBJETOS
 
-/* const personajesNombres = [Jan.nombre + " (pregenerado)", Korra.nombre + " (pregenerado)", Adelfos.nombre + " (pregenerado)", Esben.nombre + " (pregenerado)"]
-const personajes = [Jan, Korra, Adelfos, Esben] */
+const personajesNombres = [Jan.nombre + " (pregenerado)", Korra.nombre + " (pregenerado)", Adelfos.nombre + " (pregenerado)", Esben.nombre + " (pregenerado)"]
+const personajes = [Jan, Korra, Adelfos, Esben]
 
 //CONTROLAMOS SI EXISTE LOCALSTORAGE, SI NO EXISTE LO CREAMOS
 
@@ -178,7 +153,13 @@ function statRaza(){
 
 function crearpj() {
     
-    
+    Toastify({
+
+        text: "Personaje creado exitosamente",
+        
+        duration: 3000
+        
+        }).showToast();
     
     let nombrePj = document.getElementById('nombre').value
     let claseVal = document.getElementById('claseOpt')
@@ -252,8 +233,8 @@ function crearpj() {
     pjsLocales.push(pjnuevo)
     cargarPjs (pjsLocales)
     crearHoja (nombrePj, razaPersonaje, clasePersonaje, ataqueEspada, ataqueArco, dañoEspada, dañoArco, fuerzaPersonaje, destrezaPersonaje, constitucionPersonaje, inteligenciaPersonaje, sabiduriaPersonaje, carismaPersonaje)
-    botonSword.addEventListener("click", function () {ataques(modFuerza)})
-    botonBow.addEventListener("click", function () {ataques(modDestreza)})
+    botonSword.addEventListener("click", function () {ataqueEsp(modFuerza)})
+    botonBow.addEventListener("click", function () {ataqueArc(modDestreza)})
     }else {
     
     
@@ -263,25 +244,50 @@ function crearpj() {
     personajes.push(pjnuevo)
     cargarPjs (personajes)
     crearHoja (nombrePj, razaPersonaje, clasePersonaje, ataqueEspada, ataqueArco, dañoEspada, dañoArco, fuerzaPersonaje, destrezaPersonaje, constitucionPersonaje, inteligenciaPersonaje, sabiduriaPersonaje, carismaPersonaje)
-    botonSword.addEventListener("click", function () {ataques(modFuerza)})
-    botonBow.addEventListener("click", function () {ataques(modDestreza)})
+    botonSword.addEventListener("click", function () {ataqueEsp(modFuerza)})
+    botonBow.addEventListener("click", function () {ataqueArc(modDestreza)})
     }
     
     
-    //FUNCIÓN QUE SIMULA ATAQUES
+    //FUNCIONES QUE SIMULAN ATAQUES
     
     
-    function ataques (mod){
+    function ataqueEsp (mod){
         let salida= ""
         function getRandomInt(max) {
             return Math.floor(Math.random() * max) +1
     
         }                     
         for (let i = 1; i < 11; i++) {
-            salida = salida + "ataque " + i + ": " + (Math.floor(mod) + getRandomInt(8)) + "\n"
+            salida = salida + "ataque " + i + ": " + (Math.floor(mod) + getRandomInt(8)) + "<br/>"
         }
-        alert(salida)
+        Swal.fire({
+            html: salida,
+            title: 'Simulación de 10 ataques',
+            imageUrl: 'img/ataque.gif',
+            imageWidth: 200,
+            imageHeight: 200,
+            
+        })
+    }
+
+    function ataqueArc (mod){
+        let salida= ""
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max) +1
+    
+        }                     
+        for (let i = 1; i < 11; i++) {
+            salida = salida + "ataque " + i + ": " + (Math.floor(mod) + getRandomInt(8)) + "<br/>"
+        }
+        Swal.fire({
+            html: salida,
+            title: 'Simulación de 10 ataques',
+            imageUrl: 'img/ataquebow.gif',
+            imageWidth: 200,
+            imageHeight: 200,
+            
+        })
     }
 }
 
-}
