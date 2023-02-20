@@ -82,10 +82,10 @@ function crearHoja (nombre, raza, clase, ataqEspada, ataqArco, dañEspada, dañA
 
 //PERSONAJES PRE CARGADOS
 
-const Jan = new personaje("Jan", "Humano", "Bárbaro",16,14,16,10,10,12,3,1)
-const Korra = new personaje("Korra", "Semiorco", "Mago",8,14,16,16,10,10,-1,2)
-const Adelfos = new personaje("Adelfos", "Elfo", "Explorador",8,16,14,12,14,10,-1,3)
-const Esben = new personaje("Esben", "Enano", "Guerrero",8,16,14,16,12,12,-1,3)
+const Jan = new personaje("Jan (pregenerado)", "Humano", "Bárbaro",16,14,16,10,10,12,3,1)
+const Korra = new personaje("Korra (pregenerado)", "Semiorco", "Mago",8,14,16,16,10,10,-1,2)
+const Adelfos = new personaje("Adelfos (pregenerado)", "Elfo", "Explorador",8,16,14,12,14,10,-1,3)
+const Esben = new personaje("Esben (pregenerado)", "Enano", "Guerrero",8,16,14,16,12,12,-1,3)
 
 //ARRAY DE NOMBRES Y ARRAY DE OBJETOS
 

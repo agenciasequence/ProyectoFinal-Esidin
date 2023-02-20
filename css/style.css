@@ -189,9 +189,13 @@ text-decoration: none;
 }
 
 .botonFilt {
-    min-width: 30vh;
+    min-width: 19vh;
+    width: auto;
 }
 
 .botonLista {
     margin-top: 5vh;
+    min-height: 5vh;
+    background-color: #008B8B;
 }
+

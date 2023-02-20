@@ -9,6 +9,8 @@ let filtGue = document.getElementById("filtGue")
 let filtExp = document.getElementById("filtExp")
 let filtMag = document.getElementById("filtMag")
 let botonLista = document.getElementById("botonLista")
+let botonLvl0 = document.getElementById("lvl0")
+let botonLvl1 = document.getElementById("lvl1")
 
 //FUNCIONES PARA MOSTRAR Y FILTRAR PJS CREADOS
 
@@ -263,6 +265,46 @@ function mostrarMag(){
 
 }
 
+// FUNCIONES PARA HECHIZOS
+
+function mostrarSpell0() {
+fetch("./spellslvl0.json")
+.then(respuesta => respuesta.json())
+.then(hechizos => mostrarHechizo(hechizos))
+.catch(Swal.fire({
+    icon: 'error',
+    title: 'ERROR',
+    text: 'Recargue la página e inténtelo de nuevo',
+    
+  }))
+}
+
+function mostrarSpell1() {
+    fetch("./spellslvl1.json")
+    .then(respuesta => respuesta.json())
+    .then(hechizos => mostrarHechizo(hechizos))
+    .catch(Swal.fire({
+        icon: 'error',
+        title: 'ERROR',
+        text: 'Recargue la página e inténtelo de nuevo',
+        
+      }))
+    }
+
+function mostrarHechizo(hechizos) {
+    let containerLista = document.getElementById("hojaMain2")
+    
+    if (containerLista.firstChild){
+        containerLista.innerHTML = ""
+    }
+
+    for (const hechizo of hechizos ) {
+        renderLista = document.createElement("h3")
+        renderLista.innerHTML = hechizo
+
+        containerLista.append(renderLista)
+    }
+}
 
 //BOTONES
 
@@ -276,3 +318,6 @@ filtBarb.addEventListener("click", mostrarBarb)
 filtGue.addEventListener("click", mostrarGue)
 filtExp.addEventListener("click", mostrarExp)
 filtMag.addEventListener("click", mostrarMag)
+botonLvl0.addEventListener("click", mostrarSpell0)
+botonLvl1.addEventListener("click", mostrarSpell1)
+

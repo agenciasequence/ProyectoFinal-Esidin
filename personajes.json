@@ -1,9 +1,0 @@
-[
-{"nombre": "Jan","raza": "Humano", "clase": "Bárbaro", "fuerza": "16", "destreza": "14", "constitucion": "16", "inteligencia": "10", "sabiduria": "10", "carisma": "12", "modiFuerza": "3", "modiDestreza": "1" },
-{"nombre": "Korra","raza": "Semiorco", "clase": "Mago", "fuerza": "8", "destreza": "14", "constitucion": "16", "inteligencia": "16", "sabiduria": "10", "carisma": "10", "modiFuerza": "-1", "modiDestreza": "2" },
-{"nombre": "Adelfos","raza": "Elfo", "clase": "Explorador", "fuerza": "8", "destreza": "16", "constitucion": "14", "inteligencia": "12", "sabiduria": "14", "carisma": "10", "modiFuerza": "-1", "modiDestreza": "3" },
-{"nombre": "Esben","raza": "Enano", "clase": "Guerrero", "fuerza": "8", "destreza": "16", "constitucion": "14", "inteligencia": "16", "sabiduria": "12", "carisma": "12", "modiFuerza": "-1", "modiDestreza": "3" }
-
-
-
-]
