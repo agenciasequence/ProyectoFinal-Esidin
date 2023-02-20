@@ -29,15 +29,34 @@
   
     <main>
         <div class="mainDiv">
-            <div class="mitadMain">
+            <div class="mitadMain mitadFilt">
+                <div class="verLista botonesFiltro">
                 
+                <button id="botonLista"class="button1 botonLista botonFilt">Ver lista completa</button>
+                <p>(Los primeros 4 son pregenerados)</p>
+                </div>
+                <div id="botonesFiltro" class="botonesFiltro">
+                    <h3>Filtrar por Raza</h3>
+                    <button id="filtHum"class="button1 botonFilt">Ver sólo humanos</button>
+                    <button id="filtElf" class="button2 botonFilt">Ver sólo elfos</button>
+                    <button id="filtEn"class="button1 botonFilt">Ver sólo enanos</button>
+                    <button id="filtOrc" class="button2 botonFilt">Ver sólo semiorcos</button>
+    
+                </div>
+
+                <div id="botonesFiltro2" class="botonesFiltro">
+                    <h3>Filtrar por Clase</h3>
+                    <button id="filtBarb"class="button1 botonFilt">Ver sólo bárbaros</button>
+                    <button id="filtGue" class="button2 botonFilt">Ver sólo guerreros</button>
+                    <button id="filtExp"class="button1 botonFilt">Ver sólo exploradores</button>
+                    <button id="filtMag" class="button2 botonFilt">Ver sólo magos</button>
+    
+                </div>
 
         </div>
         <div id="hojaMain2" class="mitadMain hojaMain">
            
-            <div class="botonLista"><input id= "botonLista" class="btn btn-primary" type="submit" value="Ver lista"></div>
-            <p>(Los 4 primeros son pregenerados)</p>
-            </div>
+            
         </div>
     </main>
 

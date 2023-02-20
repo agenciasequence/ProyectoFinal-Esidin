@@ -120,6 +120,8 @@ h2 {
     margin:auto;
     margin-top: 5%;
     max-width: 100%;
+    text-align: left;
+    
 }
 
 .datoHoja {
@@ -172,3 +174,24 @@ text-decoration: none;
     color: #000;
     }
 
+.botonesFiltro {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 2vh;
+    max-width: 40vh;
+    place-items: center;
+    
+}
+
+.mitadFilt {
+    place-items: center;
+    row-gap: 5vh;
+}
+
+.botonFilt {
+    min-width: 30vh;
+}
+
+.botonLista {
+    margin-top: 5vh;
+}
